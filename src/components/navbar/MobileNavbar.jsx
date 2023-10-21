@@ -73,6 +73,7 @@ const MobileNavbar = ({ alata, toggle, setToggle }) => {
         </ul>
         <Link
                 href={"/contact"}
+                onClick={toggleNav}
                 className={`border-2 px-3 py-1 rounded-md border-gradients-greenOne  hover:text-gradients-greenOne font-semibold transition-colors duration-300 ${currentRoute === "/contact" ? "active" : ""}`}
               >Contact</Link>
       </motion.div>

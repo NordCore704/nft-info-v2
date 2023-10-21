@@ -26,7 +26,7 @@ import Links from "@/components/footer/components/Links";
 import Socials from "@/components/footer/components/Socials";
 import Logo from "@/components/footer/components/Logo";
 import Description from "@/components/footer/components/Description";
-import Email from "@/components/footer/Email";
+import Email from "@/components/footer/components/Email";
 import Contact from "@/components/contact/Contact";
 import ContactAvatar from "@/components/contact/components/ContactAvatar";
 import ContactForm from "@/components/contact/components/ContactForm";
@@ -36,6 +36,19 @@ import PreferenceOne from "@/components/search/components/PreferenceOne";
 import PreferenceTwo from "@/components/search/components/PreferenceTwo";
 import PreferenceThree from "@/components/search/components/PreferenceThree";
 import PreferenceFour from "@/components/search/components/PreferenceFour";
+import AboutMain from "@/components/about/AboutMain";
+import AboutIntro from "@/components/about/components/aboutIntro/AboutIntro";
+import AboutIntroText from "@/components/about/components/aboutIntro/AboutIntroText";
+import AboutIntroImage from "@/components/about/components/aboutIntro/AboutIntroImage";
+import AboutStoryMain from "@/components/about/components/aboutStorySection/AboutStoryMain";
+import AboutStoryImage from "@/components/about/components/aboutStorySection/AboutStoryImage";
+import AboutStoryText from "@/components/about/components/aboutStorySection/AboutStoryText";
+import AboutKeyWordsMain from "@/components/about/components/aboutKeywordsSection/AboutKeyWordsMain";
+import AboutKeywordsImage from "@/components/about/components/aboutKeywordsSection/AboutKeywordsImage";
+import AboutKeywordsText from "@/components/about/components/aboutKeywordsSection/AboutKeywordsText";
+import AboutTechnologiesMain from "@/components/about/components/aboutTechnologiesSection/AboutTechnologiesMain";
+import AboutTechnologiesText from "@/components/about/components/aboutTechnologiesSection/AboutTechnologiesText";
+import AboutTechnologiesImage from "@/components/about/components/aboutTechnologiesSection/AboutTechnologiesImage";
 
 
 export {
@@ -77,4 +90,17 @@ export {
   PreferenceTwo,
   PreferenceThree,
   PreferenceFour,
+  AboutMain,
+  AboutIntro,
+  AboutIntroText,
+  AboutIntroImage,
+  AboutStoryMain,
+  AboutStoryImage,
+  AboutStoryText,
+  AboutKeyWordsMain,
+  AboutKeywordsText,
+  AboutKeywordsImage,
+  AboutTechnologiesMain,
+  AboutTechnologiesText,
+  AboutTechnologiesImage,
 };

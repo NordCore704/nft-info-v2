@@ -14,7 +14,7 @@ const Socials = () => {
         <a href="" className="hover:text-scheme-greenOne duration-300">
         <BsLinkedin />
         </a>
-        <a href="" className="hover:text-scheme-greenOne duration-300">
+        <a href="mailto:petersimon0730@gmail.com"  className="hover:text-scheme-greenOne duration-300">
         <FaEnvelope />
         </a>
         <a href="" className="hover:text-scheme-greenOne duration-300">

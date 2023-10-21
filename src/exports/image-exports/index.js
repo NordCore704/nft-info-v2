@@ -6,6 +6,7 @@ import jacketGirl from '@/images/jacket-girl.png'
 import jacketBoy from '@/images/jacket-boy.png'
 import fairy from '@/images/3d-fairy.png'
 import fieryAvatar from '@/images/fiery.png'
+import blueAvatar from '@/images/blue-avatar.png'
 import displayNFT from "@/images/nft-3d.png";
 import nftGirl from "@/images/nft-girl-cut.png";
 import nftGirlFull from "@/images/nftGirl.jpeg";
@@ -48,6 +49,7 @@ export {
   jacketGirl,
   jacketBoy,
   fieryAvatar,
+  blueAvatar,
   fairy,
   vrNft,
   layer,

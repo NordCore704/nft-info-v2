@@ -1,8 +1,12 @@
+'use client'
 import React from 'react'
+import { AboutMain } from '@/exports'
 
 const About = () => {
   return (
-    <div>About</div>
+    <section className=''>
+      <AboutMain />
+    </section>
   )
 }
 

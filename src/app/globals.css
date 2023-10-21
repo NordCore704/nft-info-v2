@@ -29,3 +29,13 @@ h1, h2, h3{
   animation: slide 16s linear infinite;
   transition: ease-in-out;
 }
+.content-html a{
+    color: rgb(59 130 246 / 1);
+}
+.content-html a:hover {
+  color: #24fe41;
+  transition: .4s ease-in-out;
+}
+.content-html a:visited {
+    color: rgb(147 51 234 );
+}

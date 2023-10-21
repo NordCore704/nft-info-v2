@@ -10,7 +10,7 @@ import {
 
 const IntroHero = () => {
   return (
-    <div className="w-full sm:w-1/2 h-1/2 sm:h-full flex relative">
+    <div className="w-full sm:w-1/2 h-1/2 sm:h-full flex relative items-center justify-center">
       <motion.div
         animate="animate"
         variants={cardAnimationVariants}
@@ -23,7 +23,7 @@ const IntroHero = () => {
           damping: 7,
         }}
         initial="init"
-        className="absolute opacity-75  w-[50%] h-[75%] bg-gradient-to-br rounded-md from-gradients-greenTwo to-gradients-greenOne -z-10 top-10 left-1/4 lg:left-[18%]"
+        className="absolute opacity-75  w-[50%] h-[75%] bg-gradient-to-br rounded-md from-gradients-greenTwo to-gradients-greenOne -z-10 "
       ></motion.div>
       <motion.div
         className=""
