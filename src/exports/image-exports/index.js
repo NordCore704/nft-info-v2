@@ -34,7 +34,7 @@ import eth from '@/images/ethereum.png'
 import goerli from '@/images/goerli.png'
 import bsc from '@/images/bnb.svg'
 import optimism from '@/images/optimism.png'
-import arbitrum from '@/images/Arbitrum.svg'
+import arbitrum from '@/images/arbitrum.svg'
 
 export {
   closeburger,
