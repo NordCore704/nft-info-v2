@@ -1,9 +1,43 @@
 import Link from "next/link";
-import React from "react";
+import { useInView } from 'react-intersection-observer'
+import { motion, useAnimation } from 'framer-motion'
+import React, {useEffect} from 'react'
 
 const TrustText = () => {
+  const animation = useAnimation()
+  const [ ref, inView ] = useInView({
+    threshold: 0.6,
+    triggerOnce: true,
+  })
+
+  const scrollVariant = {
+    visible: {
+      y: 0,
+      zIndex: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 1.8,
+        type: "spring",
+      }
+    },
+    hidden: {
+      y: 100,
+      zIndex: -10,
+      opacity: 0,
+    }
+  }
+
+  useEffect(() => {
+    if (inView) {
+      animation.start('visible')
+    } else {
+      animation.start('hidden')
+    }
+
+  }, [inView])
   return (
-    <div className="w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5 justify-center items-center">
+    <motion.div className="w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5 justify-center items-center" ref={ref} variants={scrollVariant} initial='hidden' animate={animation}>
       <h2 className="self-center sm:self-start text-2xl sm:text-3xl font-bold text-center sm:text-left">
         The NFT Search App You Can Trust
       </h2>
@@ -19,7 +53,7 @@ const TrustText = () => {
         >
           Learn More
         </Link>
-    </div>
+    </motion.div>
   );
 };
 

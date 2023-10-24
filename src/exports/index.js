@@ -50,7 +50,6 @@ import AboutTechnologiesMain from "@/components/about/components/aboutTechnologi
 import AboutTechnologiesText from "@/components/about/components/aboutTechnologiesSection/AboutTechnologiesText";
 import AboutTechnologiesImage from "@/components/about/components/aboutTechnologiesSection/AboutTechnologiesImage";
 
-
 export {
   SharedLayout,
   Navbar,

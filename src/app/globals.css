@@ -28,6 +28,7 @@ h1, h2, h3{
 .animate-slide{
   animation: slide 16s linear infinite;
   transition: ease-in-out;
+  animation-delay: 2s;
 }
 .content-html a{
     color: rgb(59 130 246 / 1);
