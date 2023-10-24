@@ -1,6 +1,16 @@
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
+import { Montserrat, Ubuntu } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const AboutStoryText = () => {
   const animation = useAnimation();
@@ -36,13 +46,13 @@ const AboutStoryText = () => {
   }, [inView]);
   return (
     <motion.div
-      className="w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5"
+      className={`w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5 ${montserrat.className}`}
       ref={ref}
       variants={scrollVariant}
       animate={animation}
       initial="hidden"
     >
-      <h2 className="text-center sm:text-left self-center sm:self-start font-bold text-2xl sm:text-2xl">
+      <h2 className={`text-center sm:text-left self-center sm:self-start font-bold text-2xl sm:text-2xl ${ubuntu.className}`}>
         Our Story
       </h2>
       <p className="self-center sm:self-start text-center sm:text-left">

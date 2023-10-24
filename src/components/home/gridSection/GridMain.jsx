@@ -3,6 +3,16 @@ import React, { useEffect } from "react";
 import { GridOne, GridTwo, GridThree } from "@/exports";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Montserrat, Ubuntu } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const GridMain = () => {
   const animation = useAnimation();
@@ -38,7 +48,7 @@ const GridMain = () => {
   }, [inView]);
   return (
     <motion.section
-      className="w-full flex flex-col px-4 lg:px-10 py-4 justify-center items-center bg-scheme-darkGrey gap-10 overflow-y-hidden"
+      className={`w-full flex flex-col px-4 lg:px-10 py-4 justify-center items-center bg-scheme-darkGrey gap-10 overflow-y-hidden ${montserrat.className}`}
       ref={ref}
     >
       <motion.div
@@ -47,7 +57,9 @@ const GridMain = () => {
         animate={animation}
         initial="hidden"
       >
-        <h2 className="text-center font-semibold text-xl sm:text-2xl">
+        <h2
+          className={`text-center font-semibold text-xl sm:text-2xl ${ubuntu.className}`}
+        >
           Curated Collections For Every Taste
         </h2>
         <p className="text-scheme-grey text-center">

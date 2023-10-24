@@ -3,6 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { maskNFT } from "@/exports/image-exports";
+import { Montserrat, Ubuntu } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const PreferenceOne = () => {
   const imageAnimationVariants = {
@@ -43,27 +53,29 @@ const PreferenceOne = () => {
     },
   };
   return (
-    <div className=" w-full h-screen  flex flex-col sm:flex-row md:flex-row lg:flex-row md:justify-between mb-10 sm:justify-between lg:justify-between gap-8">
+    <div
+      className={`w-full flex flex-col sm:flex-row md:flex-row lg:flex-row gap-8 ${montserrat.className}`}
+    >
       <motion.div
-        className="bg-green-500 sm:w-[35%] lg:w-[30%] md:w-[30%] md:h-full sm:h-[90%] lg:h-full h-[50%]"
+        className="bg-green-500 sm:w-[35%] lg:w-[30%] md:w-[30%] md:h-full sm:h-[100%] lg:h-full h-[50%] items-stretch"
         variants={imageAnimationVariants}
         initial="init"
         transition={{
           ease: "easeInOut",
           duration: 0.9,
           type: "spring",
-          delay: .5,
+          delay: 0.5,
         }}
         animate="animate"
       >
         <Image
           alt="image"
           src={maskNFT}
-          className="h-full w-full object-cover"
+          className="h-[100%] w-full object-cover"
         />
       </motion.div>
-      <div className="md:w-[60%] lg:w-[60%] sm:w-[60%] h-full flex flex-col justify-between">
-        <div className="flex justify-between w-full">
+      <div className="md:w-[60%] lg:w-[60%] sm:w-[60%] h-full flex flex-col gap-5 flex-one self-end">
+        <div className="flex justify-between w-full self-start">
           <motion.div
             className="flex flex-col gap-3"
             variants={addOnsVariants}
@@ -83,7 +95,7 @@ const PreferenceOne = () => {
             <motion.p>Search NFTs without unique specifics</motion.p>
           </motion.div>
           <motion.p
-            className="text-8xl font-bold text-scheme-white"
+            className={`text-8xl font-bold text-scheme-white ${ubuntu.className}`}
             variants={numberAnimationVariants}
             initial="init"
             animate="animate"
@@ -98,7 +110,7 @@ const PreferenceOne = () => {
           </motion.p>
         </div>
         <motion.div
-          className="lg:mb-32 sm:mb-32 md:mb-32 w-full flex flex-col gap-3"
+          className=" w-full flex flex-col gap-3 self-end"
           variants={ballVariant}
           initial="init"
           animate="animate"
@@ -109,7 +121,11 @@ const PreferenceOne = () => {
             type: "spring",
           }}
         >
-          <p className="text-4xl font-semibold text-scheme-white">Get All NFTs On A Blockchain</p>
+          <h2
+            className={`text-4xl font-semibold text-scheme-white ${ubuntu.className}`}
+          >
+            Get All NFTs On A Blockchain
+          </h2>
           <p className="">
             This is for users who are aiming to get data on every NFT that
             exists on the specified blockchain, this will performs a detailed

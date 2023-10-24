@@ -9,16 +9,26 @@ import {
   heroButtonTransitions,
 } from "@/utils/exports/animationExports";
 import { motion } from "framer-motion";
+import { Montserrat, Ubuntu } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const IntroText = () => {
   return (
-    <div className="w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5 lg:gap-8 justify-center items-center">
+    <div className={`w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5 lg:gap-8 justify-center items-center ${montserrat.className}`}>
       <motion.h1
         variants={heroHeaderAnimations}
         animate="animate"
         transition={heroHeaderTransitions}
         initial="init"
-        className="font-bold text-4xl md:text-5xl sm:text-left text-center self-center sm:self-start"
+        className={`font-bold text-4xl md:text-5xl sm:text-left text-center self-center sm:self-start ${ubuntu.className}`}
       >
         Get Data On NFTs
       </motion.h1>

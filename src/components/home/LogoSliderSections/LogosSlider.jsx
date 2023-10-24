@@ -2,6 +2,13 @@ import Image from "next/image";
 import React from "react";
 import { eth, goerli, bsc, optimism, arbitrum } from "@/exports/image-exports";
 import { motion } from "framer-motion";
+import { Montserrat, Ubuntu } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 
 const LogosSlider = () => {
 
@@ -19,7 +26,7 @@ const LogosSlider = () => {
   }
 
   return (
-    <motion.div className="w-full px-4 py-5 h-14 items-center flex gap-5 lg:gap-2 animate-slide" variants={opacityVariant} animate='animate' initial='init' transition={opacityVariant.transition}>
+    <motion.div className={`w-full px-4 py-5 h-14 items-center flex gap-5 lg:gap-2 animate-slide ${montserrat.className}`} variants={opacityVariant} animate='animate' initial='init' transition={opacityVariant.transition}>
       <div className="flex flex-col items-center w-[30%]">
         <Image src={eth} alt="eth" className="w-6" />
         <p className="font-semibold hidden sm:flex">Ether</p>

@@ -40,10 +40,10 @@ const MobileNavbar = ({ alata, toggle, setToggle }) => {
           // staggerChildren: 0.4,
           // delayChildren: 2,
         }}
-        className="bg-scheme-greenOne text-scheme-darkerGrey w-full h-full flex flex-col gap-5 items-start justify-center text-center p-5"
+        className="text-scheme-greenOne bg-scheme-bgBlack w-full h-full flex flex-col gap-5 items-start justify-center text-center p-5"
       >
         <ul className="flex flex-col gap-6 font-semibold text-left w-[90%]">
-          <li className="">
+          <li className="hover:text-gradients-greenOne font-semibold transition-colors duration-300 text-xl">
             <Link
               href={"/"}
               onClick={toggleNav}
@@ -52,7 +52,7 @@ const MobileNavbar = ({ alata, toggle, setToggle }) => {
               Home
             </Link>
           </li>
-          <li className="">
+          <li className="hover:text-gradients-greenOne font-semibold transition-colors duration-300 text-xl">
             <Link
               href={"/about"}
               onClick={toggleNav}
@@ -61,7 +61,7 @@ const MobileNavbar = ({ alata, toggle, setToggle }) => {
               About
             </Link>
           </li>
-          <li className="">
+          <li className="hover:text-gradients-greenOne font-semibold transition-colors duration-300 text-xl">
             <Link
               href={"/search"}
               onClick={toggleNav}
@@ -74,7 +74,7 @@ const MobileNavbar = ({ alata, toggle, setToggle }) => {
         <Link
                 href={"/contact"}
                 onClick={toggleNav}
-                className={`border-2 px-3 py-1 rounded-md border-gradients-greenOne  hover:text-gradients-greenOne font-semibold transition-colors duration-300 ${currentRoute === "/contact" ? "active" : ""}`}
+                className={`border-2 px-3 py-1 rounded-md border-gradients-greenOne  hover:text-gradients-greenOne font-semibold transition-colors duration-300 text-xl ${currentRoute === "/contact" ? "active" : ""}`}
               >Contact</Link>
       </motion.div>
     </div>

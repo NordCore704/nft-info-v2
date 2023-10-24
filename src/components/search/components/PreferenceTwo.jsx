@@ -4,10 +4,21 @@ import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { machineNFT } from "@/exports/image-exports";
 import Link from "next/link";
+import { Montserrat, Ubuntu } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const PreferenceTwo = () => {
   const [ ref, inView ] = useInView({
-    threshold: 0.6,
+    threshold: 0.4,
+    triggerOnce: true,
   })
   const animation = useAnimation()
 
@@ -52,7 +63,7 @@ const PreferenceTwo = () => {
 
   }, [inView])
   return (
-    <div className="h-screen flex flex-col w-full gap-5 items-center" ref={ref}>
+    <div className={`flex flex-col w-full gap-8 items-center ${montserrat.className}`} ref={ref}>
       <motion.div className="w-full h-[50%] flex lg:flex-row md:flex-row sm:flex-row flex-col-reverse lg:justify-between sm:justify-between md:justify-between gap-4" animate={animation} variants={scrollVariant} initial='hidden'>
         <div className="">
           <div className="flex flex-col gap-3">
@@ -71,7 +82,7 @@ const PreferenceTwo = () => {
       </motion.div>
       <motion.div className="flex gap-4 sm:justify-between lg:justify-between md:justify-between justify-between" animate={animation} variants={scrollVariantTwo} initial='hidden'>
         <div className="flex flex-col gap-3">
-          <p className="text-4xl font-semibold text-scheme-white">Find Your NFTs</p>
+          <h2 className={`text-4xl font-semibold text-scheme-white ${ubuntu.className}`}>Find Your NFTs</h2>
           <p>
             Do You have any "strange" NFTs with little or no data on them,
             perhaps you want to know their current price, well this will help
@@ -85,7 +96,7 @@ const PreferenceTwo = () => {
             Try It Out
           </Link>
         </div>
-        <p className="text-9xl font-bold text-scheme-white">2</p>
+        <p className={`text-9xl font-bold text-scheme-white ${ubuntu.className}`}>2</p>
       </motion.div>
     </div>
   );

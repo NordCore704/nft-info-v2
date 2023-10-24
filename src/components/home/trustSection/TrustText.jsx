@@ -2,6 +2,16 @@ import Link from "next/link";
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 import React, {useEffect} from 'react'
+import { Montserrat, Ubuntu } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const TrustText = () => {
   const animation = useAnimation()
@@ -37,8 +47,8 @@ const TrustText = () => {
 
   }, [inView])
   return (
-    <motion.div className="w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5 justify-center items-center" ref={ref} variants={scrollVariant} initial='hidden' animate={animation}>
-      <h2 className="self-center sm:self-start text-2xl sm:text-3xl font-bold text-center sm:text-left">
+    <motion.div className={`w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5 justify-center items-center ${montserrat.className}`} ref={ref} variants={scrollVariant} initial='hidden' animate={animation}>
+      <h2 className={`self-center sm:self-start text-2xl sm:text-3xl font-bold text-center sm:text-left ${ubuntu.className}`}>
         The NFT Search App You Can Trust
       </h2>
       <p className="self-center sm:self-start text-center sm:text-left">

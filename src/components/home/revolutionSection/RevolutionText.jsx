@@ -2,6 +2,16 @@ import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { Montserrat, Ubuntu } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: "400",
+});
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const RevolutionText = () => {
   const animation = useAnimation();
@@ -38,14 +48,14 @@ const RevolutionText = () => {
 
   return (
     <motion.div
-      className="flex items-center justify-between w-full sm:w-1/2 h-1/2 sm:h-full text-scheme-bgBlack pb-4 sm:pb-0"
+      className={`flex items-center justify-between w-full sm:w-1/2 h-1/2 sm:h-full text-scheme-bgBlack pb-4 sm:pb-0 ${montserrat.className}`}
       ref={ref}
       variants={scrollVariant}
       animate={animation}
       initial="hidden"
     >
       <div className="flex-1 flex gap-3 flex-col items-center justify-center">
-        <h2 className="text-center sm:text-left font-semibold text-xl sm:text-2xl sm:self-start text-scheme-bgBlack">
+        <h2 className={`text-center sm:text-left font-semibold text-xl sm:text-2xl sm:self-start text-scheme-bgBlack ${ubuntu.className}`}>
           Join The NFT Revolution Today
         </h2>
         <p className="text-center sm:text-left  sm:self-start text-scheme-bgBlack">

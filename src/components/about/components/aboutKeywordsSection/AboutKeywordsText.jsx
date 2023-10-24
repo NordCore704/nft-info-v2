@@ -1,6 +1,13 @@
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
+import { Ubuntu } from "next/font/google";
+
+
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  weight: "700",
+});
 
 const AboutKeywordsText = () => {
   const animation = useAnimation();
@@ -37,7 +44,7 @@ const AboutKeywordsText = () => {
   }, [inView]);
   return (
     <motion.div
-      className="w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5"
+      className={`w-full sm:w-1/2 h-1/2 sm:h-full flex flex-col gap-5 ${ubuntu.className}`}
       ref={ref}
       variants={scrollVariant}
       animate={animation}
