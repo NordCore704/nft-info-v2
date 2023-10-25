@@ -9,7 +9,7 @@ const useContactForm = () => {
   const message = useContactFormInput("");
 
   const handleSubmit = async (event) => {
-    e.preventDefault();
+    event.preventDefault();
     const serviceId = "service_kj6jp4r";
     const publicKey = "DPdRzMaNJKGH1ga1W";
     const templateId = "template_zc87syd";
