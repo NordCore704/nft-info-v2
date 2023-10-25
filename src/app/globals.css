@@ -17,6 +17,10 @@ h1, h2, h3{
   flex: 1;
 }
 
+textarea{
+  resize: vertical;
+}
+
 .active {
   color: #24fe41;
 }
