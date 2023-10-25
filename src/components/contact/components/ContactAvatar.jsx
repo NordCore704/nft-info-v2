@@ -2,6 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { avatar } from "@/exports/image-exports";
 import { motion } from "framer-motion";
+import { Ubuntu, Montserrat } from "next/font/google";
+
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: '700'
+})
 
 const ContactAvatar = () => {
   const parentAnimationVariants = {
@@ -23,7 +29,7 @@ const ContactAvatar = () => {
   }
   return (
     <motion.div
-      className="flex flex-col items-center justify-center"
+      className={`flex flex-col items-center justify-center`}
       variants={parentAnimationVariants}
       initial="init"
       animate="animate"
@@ -41,7 +47,7 @@ const ContactAvatar = () => {
         className="w-32 bg-gradient-to-tr from-gradients-greenOne to-gradients-greenThree rounded-full hover:bg-gradient-to-tl hover:from-scheme-greenOne hover:to-gradients-greenOne transition-colors duration-500"
         src={avatar}
       />
-      <motion.p className="text-2xl font-semibold text-scheme-white" variants={textVariant}    transition={{
+      <motion.p className={`text-2xl font-semibold text-scheme-white ${ubuntu.className}`} variants={textVariant}    transition={{
           ease: "easeInOut",
           duration: .9,
           type: 'spring',

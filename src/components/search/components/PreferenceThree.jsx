@@ -17,7 +17,7 @@ const ubuntu = Ubuntu({
 
 const PreferenceThree = () => {
   const [ ref, inView ] = useInView({
-    threshold: 0.7,
+    threshold: 0.4,
     triggerOnce: true,
   })
   const animation = useAnimation()

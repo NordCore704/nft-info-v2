@@ -166,7 +166,7 @@ const Navbar = () => {
       <motion.div className="hidden sm:flex" variants={listAnimationVariant} animate='animate' initial='init' transition={{duration: .4, type: 'spring'}}>
       <Link
                 href={"/contact"}
-                className={`border-2 px-3 py-1 rounded-md border-scheme-greenOne hidden sm:flex  hover:text-scheme-greenOne transition-colors duration-300 ${currentRoute === "/contact" ? "active" : ""}`}
+                className={`border-2 px-3 py-1 rounded-md border-scheme-greenOne hidden sm:flex  hover:text-scheme-greenOne transition-colors duration-300 ${currentRoute === "/contact" ? "active" : ""} ${alata.className}`}
               >
                 Contact
               </Link>

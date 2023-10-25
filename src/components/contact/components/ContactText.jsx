@@ -1,5 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Ubuntu, Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: '400'
+})
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: '700'
+})
 
 const ContactText = () => {
 
@@ -36,7 +46,7 @@ const ContactText = () => {
 
   }
   return (
-    <motion.div className="flex flex-col gap-4" variants={parentAnimationVariants} initial='init' animate='animate' transition={{
+    <motion.div className={`flex flex-col gap-4 ${montserrat.className}`} variants={parentAnimationVariants} initial='init' animate='animate' transition={{
       ease: "easeInOut",
       staggerChildren: 0.5,
       delayChildren: .3,
@@ -55,7 +65,7 @@ const ContactText = () => {
         <p className="text-scheme-white text-lg uppercase">contact</p>
         <hr className="w-[80%] h-0.5 bg-black" />
       </motion.div>
-      <motion.p className="text-5xl text-center sm:text-left lg:text-7xl md:text-7xl sm:text-7xl font-semibold text-scheme-white" variants={textAnimationVariants}  transition={{
+      <motion.h2 className={`text-5xl text-center sm:text-left lg:text-7xl md:text-7xl sm:text-7xl font-semibold text-scheme-white ${ubuntu.className}`} variants={textAnimationVariants}  transition={{
           ease: "easeInOut",
           // delay: 0.8,
           // duration: .9,
@@ -64,7 +74,7 @@ const ContactText = () => {
           type: 'spring',
         }}>
         Meet The Creator
-      </motion.p>
+      </motion.h2>
     </motion.div>
   );
 };
